@@ -1,0 +1,28 @@
+@import 'normalize.css/normalize.css'
+@import './_variables'
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+// @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')
+
+html, body
+    height: 100%
+
+body
+    background: $white
+    overflow-x: hidden
+    display: flex
+    flex-direction: column
+
+*
+    font-family: 'Lato', 'Inter', sans-serif
+    z-index: 1
+    box-sizing: border-box
+
+main
+    margin-top: $navbarHeight
+    flex: 1 0 auto
+
+p
+    margin: 2rem
+    text-align: center
+    line-height: 1.4
+    color: $font

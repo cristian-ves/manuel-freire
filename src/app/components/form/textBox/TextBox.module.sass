@@ -1,0 +1,53 @@
+@import '../../../styles/_variables'
+
+.container
+    --color: #5757577e
+    --error: #d14a4a
+
+    display: flex
+    justify-content: center
+
+    margin: 2rem auto
+
+.group
+    position: relative
+
+.input
+    font-size: 1rem
+    color: rgb(99, 99, 99)
+    padding: .6rem .3rem
+    outline: none
+    width: 16rem
+    transition: border .5s
+
+    border: 2px solid var(--color)
+
+.error-message
+    display: none
+    color: var(--error)
+    font-size: 0.8rem
+    margin: 0.3rem
+
+.error .error-message
+    display: block
+
+.error .group .input
+    border: 2px solid var(--error)
+
+.info
+    color: var(--color)
+    cursor: pointer
+    position: absolute
+    top: 0
+    left: 0.5rem
+    transform: translateY(10px)
+    transition: transform .5s, color .3s
+
+.input:focus+.info,
+.input:not(:placeholder-shown)+.info
+    transform: translateY(-1.1rem) scale(.8)
+    transform-origin: top left
+    --color: #6096a5
+
+.input:focus,.input:not(:placeholder-shown)
+    --color: #6096a5

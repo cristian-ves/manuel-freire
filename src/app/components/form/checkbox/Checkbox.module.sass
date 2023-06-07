@@ -1,0 +1,44 @@
+@import '../../../styles/_variables'
+
+.input
+    display: none
+
+.span
+    font-size: 2rem
+    display: inline-block
+    position: relative
+    height: 1.4rem
+    width: 1.4rem
+    border: 1px solid $black
+    border-radius: 0.3rem
+
+.span:after
+    content: ''
+    position: absolute
+    border: solid $white
+    border-width: 0 0.3rem 0.3rem 0
+    transform: translate(-50%, -50%) rotate(45deg)
+    width: 0.3rem
+    height: .75rem
+    left: 50%
+    top: 45%
+    opacity: 0
+    transition: .3s ease
+
+.box .input:checked ~ .span:after
+    opacity: 1
+
+.box .input:checked ~ .span
+    background: $black
+
+.label
+    cursor: pointer
+    display: flex
+    width: 16rem
+    justify-content: space-between
+    align-items: center
+    margin: 1rem auto
+    gap: 0.5rem
+
+.text
+    margin: 0

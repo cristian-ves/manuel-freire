@@ -1,0 +1,52 @@
+@import '../../styles/_variables'
+
+.container
+    background: $black
+    color: $white
+    flex-shrink: 0
+    padding: 1rem 1rem
+
+.title
+    margin: 1rem
+    font-weight: 400
+
+.button
+    margin-left: 2rem !important
+    width: 10rem
+    font-size: 0.9rem
+    padding: 1rem
+
+.logoList
+    display: flex
+    gap: 1rem
+
+    li
+        list-style: none
+        width: 1.5rem
+
+        a
+            text-decoration: none
+            color: $white
+
+.correo
+    margin-left: 1rem
+    cursor: pointer
+
+.seccionesList
+    li
+        list-style: none
+
+@mixin seccion()
+    color: $white
+    text-decoration: none
+    font-size: 0.8rem
+    font-weight: 300
+
+.activeSeccion
+    @include seccion()
+    font-weight: bold
+
+.seccion
+    @include seccion()
+.enlace
+    list-style: none

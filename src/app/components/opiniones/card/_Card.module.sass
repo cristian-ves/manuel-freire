@@ -1,0 +1,33 @@
+@import '../../../styles/_variables'
+
+.container
+    background: $primary
+    color: $white
+    border-radius: 0.8rem
+    box-shadow: $medium
+    display: flex
+    flex-direction: column
+    width: 12rem
+    height: 12rem
+    font-size: 0.85rem
+
+    justify-content: space-around
+    padding: 0 1rem
+    transition: transform .6s ease
+
+    .text
+        text-align: left
+        margin: 0
+        color: $white
+
+    .quote
+        text-align: right
+        align-self: stretch
+
+    .quote:before
+        content: "- "
+    .quote:after
+        content: none
+
+.isActive
+    transform: scale(1.2)
