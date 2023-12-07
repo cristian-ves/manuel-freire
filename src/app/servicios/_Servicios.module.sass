@@ -1,0 +1,15 @@
+@import '../styles/_variables'
+
+.cards
+    width: 100%
+    display: grid
+    grid-template-columns: 272px
+    justify-content: center
+    gap: 1.5rem
+    margin-bottom: 2rem
+    @include md
+        grid-template-columns: repeat(2, 272px)
+    @include lg
+        grid-template-columns: repeat(3, 272px)
+    @include xl
+        grid-template-columns: repeat(4, 272px)

@@ -1,26 +1,26 @@
 @import '../../styles/_variables'
 
-@mixin button
-    cursor: pointer
-    font-size: 0.9rem
-    display: block
-    margin: 2rem auto
-    padding: 1rem 0.5rem
-    text-align: center
-    transition: all .2s ease-in-out
-    width: 10rem
-    &:hover
-        transform: scale(1.1)
-
 .container
     @include button
 
     background: $black
     color: $white
 
+    .text
+        color: $white
+
 .containerSecondary
     @include button
 
     background: $white
-    color: $black
     border: 2px $black solid
+    color: $black
+
+    .text
+        color: $black
+
+.text
+    text-decoration: none
+    padding: 1rem 0.5rem
+    margin: 0
+    display: block

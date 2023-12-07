@@ -7,9 +7,59 @@ $black: #083344
 $font: #2a393f
 $primary: #0F7490
 $secondary: #e6f4f1
+
 //* heights
 $navbarHeight: 3.5rem
 
 //* Box shadows
 $shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)
 $medium: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)
+
+//* Functions
+@function toRem($value)
+    $remValue: ($value / 16) + rem
+    @return $remValue
+
+//* querys layout
+$xs: 360px
+$s: 440px
+$m: 768px
+$l: 1280px
+$xl: 1440px
+
+//* Mixins
+@mixin button
+    cursor: pointer
+    font-size: 0.9rem
+    display: block
+    margin: 2rem auto
+    padding: 0
+    text-align: center
+    transition: all .2s ease-in-out
+    width: 10rem
+    &:hover
+        transform: scale(1.1)
+
+// Small tablets (portrait view)
+$screen-md-min: 768px
+
+// Tablets and small desktops
+$screen-lg-min: 992px
+
+// Large tablets and desktops
+$screen-xl-min: 1200px
+
+// Medium devices
+@mixin md
+    @media (min-width: #{$screen-md-min})
+        @content
+
+// Large devices
+@mixin lg
+    @media (min-width: #{$screen-lg-min})
+        @content
+
+// Extra large devices
+@mixin xl
+    @media (min-width: #{$screen-xl-min})
+        @content

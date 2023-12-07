@@ -23,12 +23,12 @@
     left: 50%
     top: 45%
     opacity: 0
-    transition: .3s ease
+    transition: .5s ease
 
-.box .input:checked ~ .span:after
+.checked:after
     opacity: 1
 
-.box .input:checked ~ .span
+.checked
     background: $black
 
 .label
@@ -39,6 +39,9 @@
     align-items: center
     margin: 1rem auto
     gap: 0.5rem
+
+    @include md
+        margin: 0
 
 .text
     margin: 0

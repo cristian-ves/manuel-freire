@@ -3,18 +3,14 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Styles from "./TextBox.module.sass";
 
-import { useForm } from "@/app/hooks/useForm";
-
 export const TextBox = ({ labelText, errorMessage = "", ...inputProps }) => {
   const [containerClass, setContainerClass] = useState(Styles.container);
-  const { handleInputChange } = useForm("");
 
   const input = useRef(null);
 
   const id = useId();
 
   useEffect(() => {
-    console.log(errorMessage);
     if (errorMessage != "") {
       setContainerClass(Styles.container + " " + Styles.error);
       input.current.focus();
@@ -28,9 +24,7 @@ export const TextBox = ({ labelText, errorMessage = "", ...inputProps }) => {
       <div className={Styles.group}>
         <input
           id={id}
-          autoComplete="off"
           className={Styles.input}
-          onChange={handleInputChange}
           type={"text"}
           placeholder=" "
           ref={input}

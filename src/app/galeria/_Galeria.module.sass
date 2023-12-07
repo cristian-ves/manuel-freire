@@ -1,0 +1,73 @@
+@import ../styles/_variables
+
+.container
+    display: flex
+    flex-direction: column
+    position: relative
+    justify-content: center
+    width: 90%
+    margin: 0 auto 2rem
+
+.grid
+    columns: 2
+    column-gap: 0.5rem
+    width: 100%
+    margin: 0 auto
+    @include md
+        columns: 3
+    @include lg
+        columns: 4
+
+.gridItem
+    border-radius: .2rem
+    overflow: hidden
+    -webkit-column-break-inside: avoid
+    -moz-column-break-inside: avoid
+    -moz-page-break-inside: avoid
+    page-break-inside: avoid
+    break-inside: avoid-column
+    display: inline-flex
+    box-shadow: $medium
+    margin: 0.2rem 0
+
+    img
+        width: 100%
+        height: auto
+        cursor: pointer
+        transition: filter .5s
+
+        &:hover, &:active
+            filter: brightness(0.9)
+
+.verMas
+    align-items: center
+    background: rgba($black,0.8)
+    border-bottom-left-radius: 0.5rem
+    border-bottom-right-radius: 0.5rem
+    bottom: 0
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    font-size: 1.2rem
+    gap: .5rem
+    justify-content: center
+    left: 0
+    min-height: 8rem
+    position: absolute
+    text-decoration: none
+    width: 100%
+    p
+        color: $white
+        margin: 0
+    svg
+        width: 5rem
+        color: $white
+        animation: moveUpDown 1.4s infinite
+
+@keyframes moveUpDown
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(0)

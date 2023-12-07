@@ -5,7 +5,9 @@
     --error: #d14a4a
 
     display: flex
+    flex-direction: column
     justify-content: center
+    align-items: center
 
     margin: 2rem auto
 
@@ -21,6 +23,9 @@
     transition: border .5s
 
     border: 2px solid var(--color)
+
+    @include md
+        width: 32rem
 
 .error-message
     display: none

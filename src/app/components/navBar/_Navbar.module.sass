@@ -38,6 +38,9 @@
     width: 2.5rem
     position: relative
 
+    @include lg
+        display: none
+
     svg
         position: absolute
         width: 100%
@@ -74,6 +77,21 @@
             hr
                 width: 80%
                 order: 4
+$gap: 1.5rem
+.menuSectionLg
+    display: none
+
+    @include lg
+        display: block
+        ul
+            display: flex
+            gap: $gap
+            margin-right: $gap
+
+            li
+                list-style: none
+                a
+                    color: #F1FDFB
 
 .close
     opacity: 0
@@ -86,3 +104,9 @@
     color: $black
     text-decoration: none
     font-weight: bold
+
+    @include lg
+        text-decoration: underline
+        text-underline-offset: 0.4rem
+        transition: 0.3s
+        padding: 0.5rem

@@ -18,15 +18,18 @@
     "@mdi/light-js": "^0.2.63",
     "@mdi/react": "^1.6.1",
     "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
     "eslint": "8.39.0",
     "eslint-config-next": "13.4.0",
     "gsap": "^3.11.5",
     "next": "13.4.0",
     "normalize": "^0.3.1",
     "normalize.css": "^8.0.1",
+    "qs": "^6.11.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.62.1",
+    "sweetalert2": "^11.7.16",
     "swiper": "^9.3.2"
   }
 }

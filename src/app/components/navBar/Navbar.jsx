@@ -8,6 +8,8 @@ import { mdiClose } from "@mdi/js";
 import Styles from "./_Navbar.module.sass";
 import NavBarList from "./NavBarList";
 import { useToggleMenu } from "@/app/hooks/useToggleMenu";
+import Link from "next/link";
+import NavbarListLg from "./NavbarListLg";
 
 const NavBar = () => {
   const { toggleNavBarList, navBarList, bg, button } = useToggleMenu();
@@ -16,7 +18,7 @@ const NavBar = () => {
     <header className={Styles.header}>
       <nav>
         <div className={Styles.navbar}>
-          <div className={Styles.logo}>
+          <Link className={Styles.logo} href="/">
             <Image
               src="/assets/logo.svg"
               width={100}
@@ -24,7 +26,8 @@ const NavBar = () => {
               className={Styles.svg}
               alt="Manuel Freire logo"
             />
-          </div>
+          </Link>
+          <NavbarListLg />
           <div
             className={Styles.hamburguerButton}
             onClick={toggleNavBarList}

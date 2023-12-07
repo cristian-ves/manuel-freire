@@ -1,8 +1,7 @@
-import React, { useId } from "react";
-
+import React, { forwardRef, useId } from "react";
 import Styles from "./Checkbox.module.sass";
 
-const Checkbox = ({ children }) => {
+const Checkbox = forwardRef(({ isChecked, children, ...props }, ref) => {
   const id = useId();
 
   return (
@@ -10,15 +9,20 @@ const Checkbox = ({ children }) => {
       <div className={Styles.box}>
         <input
           type="checkbox"
-          name="checkbox"
           id={id}
           className={Styles.input}
+          ref={ref}
+          {...props}
         />
-        <span className={Styles.span}></span>
+        <span
+          className={Styles.span + " " + (isChecked ? Styles.checked : "")}
+        ></span>
       </div>
       <p className={Styles.text}>{children}</p>
     </label>
   );
-};
+});
+
+Checkbox.displayName = "Checkbox";
 
 export default Checkbox;

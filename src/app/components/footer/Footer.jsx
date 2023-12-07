@@ -13,7 +13,7 @@ const Footer = () => {
       <h3 className={Styles.title}>
         ¡Envía tu presupuesto! Cualquier detalle nos ayudará
       </h3>
-      <Button isPrimary={false} className={Styles.button}>
+      <Button isPrimary={false} className={Styles.button} to="/presupuesto">
         Obtener presupuesto
       </Button>
       <RedesSociales />

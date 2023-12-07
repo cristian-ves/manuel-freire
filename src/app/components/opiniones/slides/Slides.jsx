@@ -17,6 +17,20 @@ const Slides = () => {
     <Swiper
       slidesPerView={1}
       spaceBetween={0}
+      breakpoints={{
+        600: {
+          slidesPerView: 2,
+        },
+        780: {
+          slidesPerView: 3,
+        },
+        1080: {
+          slidesPerView: 4,
+        },
+        1400: {
+          slidesPerView: 5,
+        },
+      }}
       loop={true}
       pagination={{
         clickable: true,
