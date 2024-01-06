@@ -4,7 +4,11 @@ import Styles from "./_WhatsappButton.module.sass";
 
 const WhatsappButton = () => {
   return (
-    <a href="" className={Styles.container}>
+    <a
+      href="https://wa.me/34627044206"
+      target="_blank"
+      className={Styles.container}
+    >
       <svg
         width="41"
         height="41"
