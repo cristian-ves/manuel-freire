@@ -135,7 +135,7 @@ const Form = () => {
         const config = {
           method: "post",
           maxBodyLength: Infinity,
-          url: "http://localhost:3000/submit",
+          url: "https://manuel-freire-email.onrender.com/submit",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
