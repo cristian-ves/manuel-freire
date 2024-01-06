@@ -17,8 +17,8 @@ const Contactanos = ({ titleHasImage = false }) => {
       )}
 
       <p>
-        Puedes contactarnos por whatsapp o llamarnos al número de teléfono: +34
-        91 851 82 03 - 627 044 206.
+        Puedes contactarnos por whatsapp o llamarnos al número de teléfono: 627
+        044 206.
       </p>
 
       <div className={Styles.container2Buttons}>
